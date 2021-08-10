@@ -1,15 +1,49 @@
 :root {
     --gameBoardColor: purple;
+    font-family: "Times New Roman", Times, serif;
 }
 html {
     background-image: url("background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--gameBoardColor);
 }
 h1 {
     text-align: center;
     color: black;
     font-size: 70px;
+    text-shadow:
+    -1px -1px 0 #FFF,  
+     1px -1px 0 #FFF,
+     -1px 1px 0 #FFF,
+      1px 1px 0 #FFF;
+}
+#opponentSelector {
+    text-align: center;
+    margin-top: -25px;
+}
+#opponentsLabel {
+    font-size: 25px;
+    text-shadow:
+    -1px -1px 0 #FFF,  
+     1px -1px 0 #FFF,
+     -1px 1px 0 #FFF,
+      1px 1px 0 #FFF;
+}
+.opponent {
+    background-color: blue;
+}
+#winMessage {
+    height: 100px;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
 }
 #gameBoard {
     display: grid;
@@ -18,7 +52,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     background-color: var(--gameBoardColor);
-    margin: 100px auto auto auto;
+    margin: 0px auto 0px auto;
     grid-template-areas: 
         "TL TM TR"
         "ML MM MR"
@@ -29,11 +63,19 @@ h1 {
     border-width: 3px;
     border-style: solid;
     border-color: black;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", Arial;
 }
-#TL {
+#TL { /* div's ids are row and then column, T=top, M=middle, B=Bottom, L=Left, R=right */
    border-left-color: var(--gameBoardColor);
    border-top-color: var(--gameBoardColor);
    grid-area: TL;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 #ML {
     border-left-color: var(--gameBoardColor);
@@ -68,4 +110,11 @@ h1 {
     border-right-color: var(--gameBoardColor);
     border-bottom-color: var(--gameBoardColor);
     grid-area: BR;
+}
+#reset {
+    text-align: center;
+    margin-bottom: 100px;
+}
+#resetBTN {
+    background-color: red;
 }

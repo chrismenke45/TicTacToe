@@ -3,9 +3,17 @@
     <head>
         <script src="TicTacToe.js" defer></script>
         <link rel="stylesheet" href="TicTacToe.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     </head>
 <body>
     <div><h1>Tic Tac Toe</h1></div>
+    <div id="opponentSelector">
+        <label for="opponents" id="opponentsLabel">Opponent: </label>
+        <br>
+        <button value="computer" id="computerBTN" class="opponent">Computer</button>
+        <button value="otherPlayer" id="playerBTN">Player 2</button>
+    </div>
+    <div id="winMessage"></div>
     <div id="gameBoard"> <!--div's ids are row and then column, T=top, M=middle, B=Bottom, L=Left, R=right-->
         <div id="TL" class="boardSquare"></div>
         <div id="ML" class="boardSquare"></div>
@@ -16,6 +24,9 @@
         <div id="TR" class="boardSquare"></div>
         <div id="MR" class="boardSquare"></div>
         <div id="BR" class="boardSquare"></div>
+    </div>
+    <div id="reset">
+    <button id="resetBTN">Reset</button>
     </div>
 
 </body>
