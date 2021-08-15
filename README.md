@@ -1,0 +1,1 @@
+I made this Tic Tac Toe game with the goal of having as few global variables as possible in my JS.  
